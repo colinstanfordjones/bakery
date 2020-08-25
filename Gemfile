@@ -66,10 +66,6 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'debase'
-  gem 'rubocop', '~> 0.81.0'
-  gem 'ruby-debug-ide'
-  gem 'solargraph'
 end
 
 group :test do

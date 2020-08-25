@@ -9,7 +9,7 @@ Development Instructions
 -----------------------
 The following bugs fixes or features need to be completed:
 
-1. ~~Bug: "no fillings" text is never displayed when cookies have no fillings~~
+1. Bug: "no fillings" text is never displayed when cookies have no fillings
 
 2. Feature: Cookies should actually be cooked
    We lazily added to Cookie: def ready?; true; end
