@@ -8,6 +8,6 @@ end
 
 class ActiveRecord::Associations::CollectionProxy
   def fillings
-    !self.empty? ? self.first.fillings : "no fillings"
+    !self.first.fillings.empty? ? self.first.fillings : "no fillings"
   end
 end
