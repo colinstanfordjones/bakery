@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 
   resources :ovens do
     resource :cookies
+
     member do
+      get :status
       post :empty
     end
   end
+
 end

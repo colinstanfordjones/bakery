@@ -27,6 +27,7 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
+gem 'render_async'
 
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 3.0'

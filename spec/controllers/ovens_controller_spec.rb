@@ -3,6 +3,14 @@ require 'spec_helper'
 describe OvensController do
   let(:user) { FactoryGirl.create(:user) }
 
+  before do
+    travel_to Time.now - 3.minutes
+  end
+
+  after do
+    travel_back
+  end
+
   describe 'GET index' do
     let(:the_request) { get :index }
 
@@ -98,10 +106,11 @@ describe OvensController do
 
       it "moves the oven's cookie to the user" do
         cookie = FactoryGirl.create(:cookie, storage: oven)
+        travel_back
 
         the_request
 
-        expect(oven.cookie).to be_nil
+        expect(oven.cookies.count).to be_zero
         expect(user.stored_cookies.to_a).to match_array([cookie])
       end
 
