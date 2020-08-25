@@ -1,3 +1,6 @@
+- if @oven.cookies.count == 0 
+  = link_to "Prepare Cookie", new_oven_cookies_path(@oven), class: 'button'
+
 %h3= @oven.name
 
 .cookie-info
@@ -12,6 +15,4 @@
       %b Status: Baking
   - else
     None
-    = link_to "Prepare Cookie", new_oven_cookies_path(@oven), class: 'button'
-
 %br
