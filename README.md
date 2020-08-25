@@ -30,8 +30,8 @@ The following bugs fixes or features need to be completed:
    When the batch of cookies is finished cooking
    Then I should be able to remove the cookies into my store inventory~~
 
-5. Feature: As a bakery owner using the mobile web, I want my "Prepare Cookie" button to be first
-   Since the Prepare Cookie button is really important, when the bakery owner is using a mobile screen, the prepare cookie button should be the first thing on the oven page. But, on non-mobile browsers, the button should remain where it is currently.
+5. ~~Feature: As a bakery owner using the mobile web, I want my "Prepare Cookie" button to be first
+   Since the Prepare Cookie button is really important, when the bakery owner is using a mobile screen, the prepare cookie button should be the first thing on the oven page. But, on non-mobile browsers, the button should remain where it is currently.~~
 
 
 HTTP Auth access: bake / somecookies
