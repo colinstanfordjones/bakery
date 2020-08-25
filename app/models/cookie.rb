@@ -3,7 +3,11 @@ class Cookie < ActiveRecord::Base
   
   validates :storage, presence: true
 
-  def ready?
-    true
+  attribute :amount, :integer, default: 12
+end
+
+class ActiveRecord::Associations::CollectionProxy
+  def fillings
+    !self.empty? ? self.first.fillings : "no fillings"
   end
 end

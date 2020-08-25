@@ -1,4 +1,12 @@
 feature 'Cooking cookies' do
+  before do
+    travel_to Time.now - 3.minutes
+  end
+
+  after do
+    travel_back
+  end
+
   scenario 'Cooking a single cookie' do
     user = create_and_signin
     oven = user.ovens.first
@@ -10,7 +18,10 @@ feature 'Cooking cookies' do
 
     click_link_or_button 'Prepare Cookie'
     fill_in 'Fillings', with: 'Chocolate Chip'
+    fill_in 'Amount', with: 1
     click_button 'Mix and bake'
+
+    travel_back
 
     expect(current_path).to eq(oven_path(oven))
     expect(page).to have_content 'Chocolate Chip'
@@ -38,6 +49,8 @@ feature 'Cooking cookies' do
     click_link_or_button 'Prepare Cookie'
     click_button 'Mix and bake'
 
+    travel_back
+
     expect(current_path).to eq(oven_path(oven))
     expect(page).to have_content 'no fillings'
     expect(page).to have_content 'Your Cookie is Ready'
@@ -61,7 +74,10 @@ feature 'Cooking cookies' do
 
     click_link_or_button 'Prepare Cookie'
     fill_in 'Fillings', with: 'Chocolate Chip'
+    fill_in 'Amount', with: 1
     click_button 'Mix and bake'
+
+    travel_back
 
     click_link_or_button  'Prepare Cookie'
     expect(page).to have_content 'A cookie is already in the oven!'
@@ -79,7 +95,10 @@ feature 'Cooking cookies' do
     3.times do
       click_link_or_button 'Prepare Cookie'
       fill_in 'Fillings', with: 'Chocolate Chip'
+      fill_in 'Amount', with: 1
       click_button 'Mix and bake'
+
+      travel_back
 
       click_button 'Retrieve Cookie'
     end

@@ -31,12 +31,12 @@ describe CookiesController do
           expect(assigns(:oven)).to eq(oven)
         end
 
-        it "assigns a new @cookie" do
+        it "assigns a new @cookies" do
           the_request
 
-          cookie = assigns(:cookie)
-          expect(cookie).to_not be_persisted
-          expect(cookie.storage).to eq(oven)
+          cookies = assigns(:cookies)
+          expect(cookies).to_not be_persisted
+          expect(cookies.storage).to eq(oven)
         end
       end
 
@@ -57,6 +57,7 @@ describe CookiesController do
     let(:cookie_params) {
       {
         fillings: 'Vanilla',
+        amount: 1
       }
     }
 
