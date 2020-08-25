@@ -1,0 +1,6 @@
+- if @oven.ready?
+  (Your #{ @oven.cookies.count > 1 ? "Cookies are" : "Cookie is" } Ready)
+  = button_to "Retrieve Cookie", empty_oven_path, class: 'button tiny'
+- else
+  %br
+  %b Status: Baking

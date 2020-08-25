@@ -15,13 +15,13 @@ The following bugs fixes or features need to be completed:
    We lazily added to Cookie: def ready?; true; end
    But, the cookies are not actually ready instantly! When a cookie is placed in the oven, we need to trigger a background cooking worker to cook the cookies and update their state after a couple minutes of "cooking"~~
 
-3. Feature: As a bakery owner, I should see the oven page update automatically when the cookies are ready
+3. ~~Feature: As a bakery owner, I should see the oven page update automatically when the cookies are ready
    Given I have unfinished cookies in an oven
    And I am on the oven page
    Then I should see that the cookies are not yet ready
    When the cookies finish cooking
    Then I should see that the cookies are ready
-   Note: Periodic polling is acceptable, but only the relevant part of the page should update
+   Note: Periodic polling is acceptable, but only the relevant part of the page should update~~
 
 4. ~~Feature: As a bakery owner, I should be able to place a sheet with multiple cookies into an oven
    Given I have an oven
