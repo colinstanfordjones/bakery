@@ -1,1 +1,1 @@
-Capybara.asset_host = 'http://localhost:8080'
+Capybara.asset_host = 'http://localhost:3000'
